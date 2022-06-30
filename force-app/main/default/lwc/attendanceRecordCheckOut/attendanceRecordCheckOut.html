@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title= "Check Out Details" icon-name="standard:timesheet_entry">
+
+
+        <div class="slds-m-around_medium" >
+        <lightning-input type="text" label="Employee ID" value={employeeID} onchange={employeeIDChange}></lightning-input>
+    </div>
+        <div class="slds-m-around_medium"> 
+            <lightning-combobox
+            name="Department"
+            label="Department"
+            value={Department}
+            placeholder="Select Department"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+       
+      
+        <div class="slds-m-around_medium" > 
+            <lightning-input type="time" label="Check Out" value={checkOut} onchange={checkOutChange}></lightning-input>
+        </div>
+      
+
+    <div slot="footer">
+      <lightning-button label="Submit" onclick={saveAccountAction}></lightning-button>
+    </div>
+    </lightning-card>
+
+    
+</template>
